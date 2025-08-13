@@ -1,6 +1,6 @@
 {
   "name": "@robireton/reporting-endpoint",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a simple Node.js / Express implementation of a W3C Reporting API endpoint",
   "author": "Rob Ireton <rob@ireton.org>",
   "license": "MIT",
