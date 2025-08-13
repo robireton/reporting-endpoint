@@ -1,0 +1,32 @@
+{
+  "name": "@robireton/reporting-endpoint",
+  "version": "0.1.0",
+  "description": "a simple Node.js / Express implementation of a W3C Reporting API endpoint",
+  "author": "Rob Ireton <rob@ireton.org>",
+  "license": "MIT",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "scripts": {
+    "start": "node ./lib/index.js",
+    "watch": "node --watch ./lib/index.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },  "keywords": [
+    "node",
+    "express",
+    "w3c",
+    "csp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robireton/reporting-endpoint.git"
+  },
+  "homepage": "https://github.com/robireton/reporting-endpoint#readme",
+  "bugs": {
+    "url": "https://github.com/robireton/reporting-endpoint/issues"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
