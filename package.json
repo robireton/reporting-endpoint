@@ -8,11 +8,13 @@
   "exports": "./lib/index.js",
   "scripts": {
     "start": "node --disable-warning=ExperimentalWarning ./lib/index.js",
-    "watch": "node --watch ./lib/index.js"
+    "watch": "node --watch ./lib/index.js",
+    "test": "node --disable-warning=ExperimentalWarning --test"
   },
   "engines": {
     "node": ">=22.0.0"
-  },  "keywords": [
+  },
+  "keywords": [
     "node",
     "express",
     "w3c",
