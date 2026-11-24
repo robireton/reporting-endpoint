@@ -22,6 +22,13 @@ WORKDIR /home/node/app
 # the image. npm ci needs the lockfile, so both files are copied.
 COPY --chown=node:node package.json package-lock.json ./
 RUN npm ci --omit=dev
+
+# npm is only needed to install: CMD runs node directly. The copy in the base image
+# bundles packages with known vulnerabilities, which a push is scanned for.
+USER root
+RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
+USER node
+
 COPY --chown=node:node lib lib
 
-CMD [ "npm", "--silent", "start" ]
+CMD [ "node", "--disable-warning=ExperimentalWarning", "lib/index.js" ]
